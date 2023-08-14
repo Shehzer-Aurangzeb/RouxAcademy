@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>An error has occured</title>
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="/css/error.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="error-template">
+            <h1>Oops!</h1>
+            <h2><%=status%> <%=message%></h2>
+            <div class="error-details">Sorry, an error has occured</div>
+            <div class="error-actions">
+              <a href="/" class="btn btn-primary btn-lg"
+                ><span class="glyphicon glyphicon-home"></span> Take Me Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
