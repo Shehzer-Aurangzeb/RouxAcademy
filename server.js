@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const cookieSession = require('cookie-session');
+const bodyParser = require('body-parser');
 
 const app = express();
 const FeedbackService = require('./services/FeedbackService');
@@ -40,6 +41,10 @@ app.use(
     keys: ['saqQddce12s', 'Sa1defw1df'],
   })
 );
+
+//* body parser to parse the form data
+app.use(bodyParser.urlencoded({ extended: true }));
+
 //* all requests that are directed to / will use this middleware
 app.use(
   '/',

@@ -1,0 +1,20 @@
+<aside class="col-md-8">
+  <div class="maincontent feedback">
+    <h1>Recent Feedback</h1>
+    <div class="feedback-items">
+      <% feedbacks.forEach(({title,name,message}) => { %>
+      <div class="feedback-item item-list media-list">
+        <div class="feedback-item media">
+          <div class="feedback-info media-body">
+            <div class="feedback-head">
+              <div class="feedback-title"><%= title%></div>
+              <small><%= name%></small>
+            </div>
+            <div class="feedback-message"><%= message%></div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</aside>
