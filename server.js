@@ -42,8 +42,9 @@ app.use(
   })
 );
 
-//* body parser to parse the form data
+//* body parser to parse form data and json
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //* all requests that are directed to / will use this middleware
 app.use(

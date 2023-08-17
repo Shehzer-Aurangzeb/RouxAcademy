@@ -28,8 +28,8 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/speakers">All Speakers</a>
             <div class="dropdown-divider"></div>
-            <% names.forEach(({name})=>{%>
-            <a class="dropdown-item" href="#"><%= name %></a>
+            <% names.forEach(({name,shortname})=>{%>
+            <a class="dropdown-item" href="/speakers/<%=shortname%>"><%= name %></a>
             <% })%>
           </div>
         </li>

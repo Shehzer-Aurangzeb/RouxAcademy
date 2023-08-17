@@ -10,7 +10,14 @@ module.exports = (params) => {
     // * it will look into index file views/pages
     try {
       const topSpeakers = await speakerService.getList();
-      return response.render('layout', { pageTitle: 'Welcome', template: 'index', topSpeakers });
+      const artworks = await speakerService.getAllArtwork();
+
+      return response.render('layout', {
+        pageTitle: 'Welcome',
+        template: 'index',
+        topSpeakers,
+        artworks,
+      });
     } catch (err) {
       return next(err);
     }
